@@ -7,11 +7,13 @@ type props = {
 };
 export default function Layout({ children }: Readonly<props>) {
   return (
-    <div className=" flex flex-row min-h-screen w-[100%] bg-black text-white ">
-      <Sidebar />
-      <div className="flex flex-col items-center justify-between">
+    <div className="flex flex-row bg-black text-white ">
+      <div className="flex flex-col w-[100%]">
         <Header />
-        <div>{children}</div>
+        <div className="flex flex-row">
+          <Sidebar />
+          <div>{children}</div>
+        </div>
         <Footer />
       </div>
     </div>
